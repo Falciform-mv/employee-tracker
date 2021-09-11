@@ -12,4 +12,4 @@ VALUES
   ('Rob', 'Dyrdek', 1, 0),
   ('Kelly', 'Hart', 2, 1),
   ('Bob', 'Burnquist', 2, 1),
-  ('Kareem', 'Campbell', 2, 1);
+  ('Kareem', 'Campbell', 3, 1);
