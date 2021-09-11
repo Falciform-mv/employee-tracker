@@ -5,8 +5,7 @@ const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
 // view all departments
-function viewDepartments() {
-  
+
   router.get('/departments', (req, res) => {
     const sql = `SELECT * FROM departments`;
   
@@ -22,7 +21,6 @@ function viewDepartments() {
     });
   });
 
-} 
 
 // creates a department
 router.post('/department', ({ body }, res) => {
@@ -49,4 +47,4 @@ router.post('/department', ({ body }, res) => {
 });
 
 
-module.exports = { router, viewDepartments };
+module.exports = router;

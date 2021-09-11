@@ -1,6 +1,5 @@
 
 const inquirer = require('inquirer');
-const viewDepartments = require('./routes/apiRoutes/departmentRoutes')
 
 const questions = [
   {
@@ -26,6 +25,7 @@ const promptUser = () => {
 
 
 promptUser()
-.then(function() {
-  viewDepartments(); 
+.then(function(startAnswers) {
+  console.log(startAnswers);
+  
 });
