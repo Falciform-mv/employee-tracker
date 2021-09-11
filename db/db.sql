@@ -1,5 +1,5 @@
 
 DROP DATABASE IF EXISTS manager;
 
-CREATE DATABASE employees;
-USE employees;
+CREATE DATABASE manager;
+USE manager;
