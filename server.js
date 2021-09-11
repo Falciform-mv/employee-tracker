@@ -22,7 +22,9 @@ const db = mysql.createConnection(
 
 
 
-
+db.query(`SELECT * FROM employees`, (err, rows) => {
+  console.log(rows);
+});
 
 // default response for any other request (not found)
 app.use((req, res) => {
