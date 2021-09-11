@@ -1,4 +1,11 @@
 
+INSERT INTO departments (title)
+VALUES
+  ('Engineering'),
+  ('Marketing'),
+  ('Sales');
+
+
 INSERT INTO roles (title, salary, department_id)
 VALUES
   ('Manager', 100000, 10),
