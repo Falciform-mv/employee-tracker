@@ -4,21 +4,25 @@ const router = express.Router();
 const db = require('../../db/connection');
 const inputCheck = require('../../utils/inputCheck');
 
-
-router.get('/departments', (req, res) => {
-  const sql = `SELECT * FROM departments`;
-
-  db.query(sql, (err, rows) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-      return;
-    }
-    res.json({
-      message: 'success',
-      data: rows,
+// view all departments
+function viewDepartments() {
+  
+  router.get('/departments', (req, res) => {
+    const sql = `SELECT * FROM departments`;
+  
+    db.query(sql, (err, rows) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+      res.json({
+        message: 'success',
+        data: rows,
+      });
     });
   });
-});
+
+} 
 
 // creates a department
 router.post('/department', ({ body }, res) => {
@@ -45,4 +49,4 @@ router.post('/department', ({ body }, res) => {
 });
 
 
-module.exports = router;
+module.exports = { router, viewDepartments };
